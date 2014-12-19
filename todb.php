@@ -3,7 +3,6 @@
 <?php 
 $ct = 1;
 $dont_select = array ( 'srt' , 'nfo' , 'db', 'txt', 'jpg','sub','zip' ,'nomedia');
-
 function scanner_dirs($path = '\\') {
 
 	
