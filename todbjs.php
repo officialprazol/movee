@@ -1,10 +1,18 @@
 <ul>
 <?php 
 $ct = 1;
-$file_name = 'wd.csv';
-$file_name = 'morehd.csv';
+
+$file_name = 'wd.js';
+$file_name = 'morehd.js';
 
 $dont_select = array ( 'srt' , 'nfo' , 'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
+
+file_put_contents( $file_name , 'var wd = { ' .   "\r\n"   ); 
+
+scanner_dirs('H:\Movies');
+
+
+file_put_contents( $file_name, '};' .   "\r\n"   , FILE_APPEND ); 
 
 function scanner_dirs($path = '\\') {
 	global $ct, $dont_select, $file_name, $file ;
@@ -21,8 +29,8 @@ function scanner_dirs($path = '\\') {
 			}
 			elseif( isset($extension_file['extension']) && !in_array($extension_file['extension'], $dont_select)  ) {
 				
-				$filesize = formatbytes( $path . '\\' . $g , "MB");
-				 fputcsv($file, array( $ct++, $g, $filesize ,  $path ) );
+				file_put_contents( $file_name ,  '"'. $ct++ .'":"'. $g  . '",'.   "\r\n"   , FILE_APPEND ); 
+				
 
 				echo '<li>' .  $path . '\\' . $g . '</li>';
 			}
@@ -31,13 +39,6 @@ function scanner_dirs($path = '\\') {
 	}
 }
 
-
-
-$file = fopen( $file_name ,"w");
-
-scanner_dirs('H:\Movies');
-
-fclose($file); 
 
 
 
