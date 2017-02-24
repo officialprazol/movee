@@ -3,9 +3,9 @@
 $ct = 1;
 
 $file_name = 'wd.js';
-$file_name = 'morehd.js';
+//$file_name = 'morehd.js';
 
-$dont_select = array ( 'srt' , 'nfo' , 'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
+$dont_select = array ( 'srt' , 'nfo' , 'idx',  'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
 
 file_put_contents( $file_name , 'var wd = { ' .   "\r\n"   ); 
 

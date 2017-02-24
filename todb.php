@@ -1,10 +1,10 @@
 <ul>
 <?php 
 $ct = 1;
-$file_name = 'wd.csv';
+//$file_name = 'wd.csv';
 $file_name = 'morehd.csv';
 
-$dont_select = array ( 'srt' , 'nfo' , 'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
+$dont_select = array ( 'srt' , 'nfo' , 'idx' ,  'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
 
 function scanner_dirs($path = '\\') {
 	global $ct, $dont_select, $file_name, $file ;
@@ -35,7 +35,7 @@ function scanner_dirs($path = '\\') {
 
 $file = fopen( $file_name ,"w");
 
-scanner_dirs('H:\Movies');
+scanner_dirs('F:\Movies');
 
 fclose($file); 
 
