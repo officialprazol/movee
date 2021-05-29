@@ -28,7 +28,7 @@
             var lists = $('#list_to_filter');
             for (i in data) {
                 movieTitle = data[i];
-                lists.append('<li><a href="http://www.imdb.com/title/' + i + '/">' + movieTitle + '</a></li>');
+                lists.append('<li><a href="https://www.imdb.com/find?q=' + movieTitle + '/">' + movieTitle + '</a></li>');
             }
             // Activate fastLiveFilter w/ callback
             var numDisplayed = $(".num_displayed");
