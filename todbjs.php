@@ -1,24 +1,18 @@
 <ul>
 <?php 
 $ct = 1;
-
 $file_name = 'wd.js';
-//$file_name = 'morehd.js';
 
 $dont_select = array ( 'srt' , 'nfo' , 'idx',  'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
-
 file_put_contents( $file_name , 'var wd = { ' .   "\r\n"   ); 
 
-scanner_dirs('H:\Movies');
-
+scanner_dirs('F:\MOVIES');
 
 file_put_contents( $file_name, '};' .   "\r\n"   , FILE_APPEND ); 
 
 function scanner_dirs($path = '\\') {
 	global $ct, $dont_select, $file_name, $file ;
-
 	$get = scandir( $path );
-
 	foreach ($get as $g) {
 		if($g != '.' && $g != '..' ) {
 				$extension_file = pathinfo($g) ;
@@ -28,13 +22,9 @@ function scanner_dirs($path = '\\') {
 				echo '</ul>';
 			}
 			elseif( isset($extension_file['extension']) && !in_array($extension_file['extension'], $dont_select)  ) {
-				
 				file_put_contents( $file_name ,  '"'. $ct++ .'":"'. $g  . '",'.   "\r\n"   , FILE_APPEND ); 
-				
-
 				echo '<li>' .  $path . '\\' . $g . '</li>';
 			}
-			
 		}
 	}
 }
