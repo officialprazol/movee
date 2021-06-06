@@ -8,10 +8,23 @@
 
     <link rel="icon" type="image/ico" href="fav.ico">
 
-    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" media="all" href="style.css" />
+
+    <script type="text/javascript" src="jquery.min.js">
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
     <script type="text/javascript" src="jquery.fastLiveFilter.js"></script>
 
     <script type="text/javascript" charset="utf-8" src="wd.js"></script>
+
 
     <script type="text/javascript" charset="utf-8">
         function addCommas(num) {
@@ -43,12 +56,54 @@
 
 <body>
 
-    <input id="filter_input" placeholder="Type to filter" />
-    <p>Showing <span class="num_displayed"></span> movies:</p>
+    <div class="container">
 
-    <ul id="list_to_filter"></ul>
+        <div class="row py-3">
+            <div class="col-lg-9 mx-auto text-white text-center">
+                <h1 class="display-4">Mov~E Collection</h1>
+
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+                <div class="bg-white p-4 rounded shadow">
+                    <form>
+                        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-1">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button id="button-addon2" disabled class="btn btn-link text-warning"><i
+                                            class="fa fa-search"></i></button>
+                                </div>
+                                <input type="search" id="filter_input" placeholder="What're you searching for?" aria-describedby="button-addon2" class="form-control border-0 bg-light">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
 
 
+
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h5 class="font-weight-light mb-4 font-italic text-white">Showing <span class="num_displayed"></span> movies:
+                </h5>
+                <div class="bg-white p-5 rounded shadow">
+
+                    <!-- Default search inputs with colorful borders -->
+                    <form action="">
+                        <div class="form-group mb-4">
+                            <ul id="list_to_filter"></ul>
+                        </div>
+
+                    </form>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

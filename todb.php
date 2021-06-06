@@ -4,7 +4,7 @@ $ct = 1;
 //$file_name = 'wd.csv';
 $file_name = 'morehd.csv';
 
-$dont_select = array ( 'srt' , 'nfo' , 'idx' ,  'dat','rar', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
+$dont_select = array ( 'srt' , 'nfo' , 'idx' ,  'dat','rar', 'exe', 'db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
 
 function scanner_dirs($path = '\\') {
 	global $ct, $dont_select, $file_name, $file ;
