@@ -4,7 +4,7 @@ $ct = 1;
 $file_name = 'wd.js';
 
 $dont_select = array ( 'srt' , 'nfo' , 'idx',  'dat','rar',  'exe','db', 'txt', 'jpg','sub','zip' ,'nomedia', 'DS_Store');
-file_put_contents( $file_name , 'var wd = { ' .   "\r\n"   ); 
+file_put_contents( $file_name , 'var data = { ' .   "\r\n"   ); 
 
 scanner_dirs('F:\MOVIES');
 
